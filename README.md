@@ -8,7 +8,7 @@ A single-page responsive website for a **fictional** weekend coding school for c
 
 | What | Where |
 |---|---|
-| Live site (HTTPS) | TODO: Firebase URL |
+| Live site (HTTPS) | https://codecamp-kids-kl.web.app/ |
 | Design (Figma) | https://www.figma.com/design/McNJwYHC5WTsMtHD0Zg9jn |
 | Design exports | [`docs/wireframes/`](docs/wireframes/) (mobile 390, desktop 1440, brand rules) |
 | Repository | https://github.com/ApizMan/OSK-Group-Assessment |

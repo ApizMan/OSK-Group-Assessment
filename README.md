@@ -38,7 +38,7 @@ Full details are in the brand panel: [`docs/wireframes/brand-rules.png`](docs/wi
 - Type: Nunito ExtraBold for headings, Inter for body text.
 - Shape: 12px radius on buttons and cards, 8px on inputs, pill-shaped filter chips.
 - Voice: warm, short sentences, reassuring toward parents, no jargon.
-- Imagery: my own inline SVG or CSS shapes (TODO: confirm once built).
+- Imagery: no image files. The hero picture is a decorative "game screen" drawn with CSS shapes; the benefit icons are simple text glyphs.
 
 **Design decisions**
 1. The call-to-action button appears in the header, the hero and the form section, so a parent never has to hunt for it.
@@ -62,8 +62,14 @@ Full details are in the brand panel: [`docs/wireframes/brand-rules.png`](docs/wi
 ```
 src/
 ├── index.html        the page (the deployable site is the src folder)
-├── css/styles.css    styles, with design tokens as CSS custom properties
-├── js/main.js        class data, filter, form validation
+├── css/              one stylesheet per part of the page
+│   ├── base.css          design tokens (custom properties), reset, accessibility helpers
+│   ├── buttons.css, header.css, hero.css, sections.css, class-finder.css,
+│   │   steps.css, faq.css, enquiry-form.css, footer.css
+├── js/
+│   ├── classes-data.js   class data (single source of truth)
+│   ├── class-finder.js   filter by age group and day
+│   └── enquiry-form.js   demo form validation
 └── public/images/    image assets
 docs/
 ├── content-notes.md  copy drafts
@@ -120,8 +126,9 @@ TODO: approximate hours.
 
 **Update content**
 - Page text: edit `src/index.html`.
-- Classes shown in the finder: edit the class data array in `src/js/main.js`, and keep the form's class options in `src/index.html` in sync.
-- Colours, fonts and spacing: edit the custom properties at the top of `src/css/styles.css`.
+- Classes shown in the finder: edit the `CLASSES` array in `src/js/classes-data.js`. The class cards and the form's "Preferred class" options are both built from it, so there is one place to change.
+- Colours, fonts and spacing: edit the custom properties at the top of `src/css/base.css`.
+- Styles for one part of the page (for example the FAQ): edit that part's file in `src/css/`. New stylesheets must be added to `src/index.html`; `base.css` must stay first.
 
 **Redeploy:** run `firebase deploy --only hosting` from the project root.
 
@@ -143,8 +150,10 @@ TODO: approximate hours.
 | Copy | `docs/content-notes.md`, text in `src/index.html` | Drafted the first version of the wording and class and FAQ content | TODO: what I rewrote |
 | Design | Figma file, `docs/wireframes/` | Built the mobile and desktop wireframes and the brand-rules panel from a layout we agreed | TODO: what I changed |
 | Structure | `src/index.html` | Drafted the semantic HTML structure | TODO: what I edited and verified |
+| Styles | `src/css/*.css` | Wrote the stylesheet from my Figma design (tokens, mobile-first layout, breakpoints, focus styles) | TODO: what I changed, and how I checked it (widths, keyboard, contrast) |
+| Interactions | `src/js/*.js`, small edits to `src/index.html` | Wrote the class filter, the form validation and the code that fills the class options | TODO: what I changed, and how I checked it (filters, error and success states, repeated submits) |
 | Planning | README outline, schedule | Suggested the plan and the section list | TODO |
 
-TODO: add a row for any further AI help (CSS, JavaScript, debugging, README) as I use it. If I use none for a part, say so.
+TODO: add a row for any further AI help (debugging, deployment, README) as I use it. If I use none for a part, say so.
 
 I can explain and modify this submission independently.

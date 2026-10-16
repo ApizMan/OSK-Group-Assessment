@@ -1,0 +1,87 @@
+/* ==========================================================================
+   hero.css
+   Hero section: headline, call to action and the CSS-drawn picture.
+   ========================================================================== */
+
+.hero {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--gutter);
+}
+
+.hero h1 {
+  font-size: clamp(1.875rem, 1.2rem + 3vw, 3.25rem);
+  line-height: 1.2;
+}
+
+.hero__lead {
+  margin-top: var(--space-4);
+  color: var(--slate);
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
+  line-height: 1.5;
+}
+
+.hero .btn--large {
+  width: 100%;
+  margin-top: var(--space-4);
+}
+
+.hero__note {
+  margin-top: var(--space-3);
+  color: var(--slate);
+  font-size: 0.8125rem;
+  text-align: center;
+}
+
+/* Decorative "game screen" drawn with CSS shapes (no image file needed) */
+.hero__art {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 80% 26%, var(--amber) 0 11%, transparent 11.5%),
+    linear-gradient(var(--navy), var(--navy)) 10% 66% / 30% 6% no-repeat,
+    linear-gradient(var(--navy), var(--navy)) 48% 50% / 24% 6% no-repeat,
+    linear-gradient(var(--navy), var(--navy)) 66% 76% / 30% 6% no-repeat,
+    linear-gradient(var(--navy), var(--navy)) 0 100% / 100% 14% no-repeat,
+    var(--soft-amber);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+/* The "player" standing on the first platform */
+.hero__art::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  top: 48%;
+  width: 9%;
+  aspect-ratio: 1;
+  border-radius: 20%;
+  background: var(--amber);
+  border: 3px solid var(--navy);
+}
+
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr minmax(0, 520px);
+    align-items: center;
+    gap: var(--space-8);
+    padding-block: clamp(3rem, 6vw, 4.5rem);
+  }
+
+  .hero .btn--large {
+    width: auto;
+  }
+
+  .hero__note {
+    display: inline-block;
+    margin-left: var(--space-4);
+    text-align: left;
+  }
+
+  .hero__art {
+    aspect-ratio: 13 / 9;
+  }
+}

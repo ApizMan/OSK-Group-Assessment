@@ -1,0 +1,89 @@
+/* ==========================================================================
+   enquiry-form.css
+   Enquiry form: fields, errors and success message.
+   ========================================================================== */
+
+.enquiry__intro p {
+  margin-top: var(--space-3);
+  color: var(--slate);
+}
+
+.enquiry__intro .notice {
+  padding: var(--space-3);
+  border: 1px solid var(--amber);
+  border-radius: 10px;
+  background: var(--soft-amber);
+  color: var(--navy);
+  font-size: 0.8125rem;
+}
+
+.form {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px var(--space-3);
+  border: 1px solid var(--slate);
+  border-radius: var(--radius-input);
+  background: var(--white);
+  color: var(--navy);
+  font-family: var(--font-body);
+  font-size: 1rem;           /* 16px stops iOS zooming into the field */
+}
+
+.field [aria-invalid="true"] {
+  border: 2px solid var(--error);
+}
+
+.error {
+  margin-top: 6px;
+  color: var(--error);
+  font-size: 0.875rem;
+}
+
+
+.form__status {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--amber);
+  border-radius: 10px;
+  background: var(--soft-amber);
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 768px) {
+  .form {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    padding: var(--space-6);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--cream);
+  }
+
+  .form .btn,
+  .form__status {
+    grid-column: 1 / -1;
+  }
+
+  .form .btn {
+    justify-self: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .enquiry {
+    grid-template-columns: 380px 1fr;
+    gap: var(--space-8);
+  }
+}

@@ -14,8 +14,22 @@
   <!-- Empty favicon avoids a 404 until you add your own -->
   <link rel="icon" href="data:,">
 
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/main.js" defer></script>
+  <!-- Styles: one file per part of the page. Order matters (base first). -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/class-finder.css">
+  <link rel="stylesheet" href="css/steps.css">
+  <link rel="stylesheet" href="css/faq.css">
+  <link rel="stylesheet" href="css/enquiry-form.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <!-- Scripts: classes-data.js must load before the two scripts that use it -->
+  <script src="js/classes-data.js" defer></script>
+  <script src="js/class-finder.js" defer></script>
+  <script src="js/enquiry-form.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -31,7 +45,7 @@
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
-    <a class="btn btn--primary" href="#enquiry">Book a free trial</a>
+    <a class="btn btn--primary" href="#enquiry">Book <span class="btn__extra">a free </span>trial</a>
   </header>
 
   <main id="main">
@@ -95,8 +109,9 @@
       </form>
 
       <p class="result-count" id="result-count" aria-live="polite"></p>
-      <!-- Class cards are rendered here by js/main.js -->
+      <!-- Class cards are rendered here by js/class-finder.js -->
       <div class="card-grid card-grid--3" id="class-list"></div>
+      <noscript><p>Turn on JavaScript to see and filter the class list.</p></noscript>
       <p class="empty-state" id="empty-state" hidden>No classes match those filters. Try another day or age group.</p>
     </section>
 
@@ -195,12 +210,7 @@
           <label for="preferred-class">Preferred class</label>
           <select id="preferred-class" name="preferred-class" aria-describedby="preferred-class-error">
             <option value="">Choose a class</option>
-            <option>Block Builders (ages 8-9, Sat)</option>
-            <option>Story Makers (ages 8-9, Sun)</option>
-            <option>Game Lab 1 (ages 10-12, Sat)</option>
-            <option>Game Lab 2 (ages 10-12, Sun)</option>
-            <option>Web Starters (ages 10-12, Sat)</option>
-            <option>Robot Brains (ages 10-12, Sun)</option>
+            <!-- Options are added by js/enquiry-form.js from the class data -->
           </select>
           <p class="error" id="preferred-class-error" hidden></p>
         </div>

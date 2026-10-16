@@ -1,0 +1,23 @@
+/* ==========================================================================
+   footer.css
+   Footer.
+   ========================================================================== */
+
+.site-footer {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-5) var(--gutter);
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.site-footer__credits {
+  color: var(--footer-text);
+  font-size: 0.75rem;
+}
+
+.site-footer :focus-visible {
+  outline-color: var(--white);
+}

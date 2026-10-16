@@ -1,0 +1,102 @@
+/* ==========================================================================
+   header.css
+   Sticky header: wordmark, section links and the Book button.
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-3) var(--gutter);
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Small logo mark drawn with CSS */
+.wordmark::before {
+  content: "</>";
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-input);
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
+/* Section links are hidden on small screens; the Book button stays visible */
+.site-header nav {
+  display: none;
+}
+
+.site-header .btn {
+  margin-left: auto;
+  min-height: 40px;
+  padding: var(--space-2) var(--space-4);
+  font-size: 0.9rem;
+}
+
+.nav-list {
+  display: flex;
+  gap: var(--space-5);
+}
+
+.nav-list a {
+  display: inline-block;
+  padding: var(--space-2) 0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* "a free" is hidden on very small screens so the header stays on one line */
+.btn__extra {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .btn__extra {
+    display: inline;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-header {
+    padding-block: var(--space-4);
+  }
+
+  .site-header nav {
+    display: block;
+    margin-left: auto;
+  }
+
+  .site-header .btn {
+    margin-left: 0;
+    font-size: 0.95rem;
+  }
+
+  .wordmark {
+    font-size: 1.125rem;
+  }
+}

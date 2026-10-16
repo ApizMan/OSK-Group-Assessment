@@ -1,6 +1,7 @@
 /* ==========================================================================
-   hero.css
-   Hero section: headline, call to action and the CSS-drawn picture.
+   css/hero.css
+   Hero section
+   Headline, call to action and the picture drawn with CSS shapes.
    ========================================================================== */
 
 .hero {
@@ -16,7 +17,6 @@
 
 .hero__lead {
   margin-top: var(--space-4);
-  color: var(--slate);
   font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
   line-height: 1.5;
 }
@@ -28,8 +28,6 @@
 
 .hero__note {
   margin-top: var(--space-3);
-  color: var(--slate);
-  font-size: 0.8125rem;
   text-align: center;
 }
 

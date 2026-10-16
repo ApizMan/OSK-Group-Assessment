@@ -1,0 +1,50 @@
+/* ==========================================================================
+   css/components/chip/chip.css
+   Filter chip (reusable)
+   Used for the age and day filters.
+   Markup: <label class="chip"><input type="radio" name="..." value="..."><span>Label</span></label>
+   ========================================================================== */
+
+/* Radio inputs are visually hidden; the span is the visible chip */
+.chip {
+  position: relative;
+  display: inline-block;
+  margin: 0 var(--space-2) var(--space-2) 0;
+}
+
+.chip input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.chip span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--space-4);
+  border: 1px solid var(--slate);
+  border-radius: var(--radius-pill);
+  background: var(--white);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.chip input:hover + span {
+  border-color: var(--navy);
+}
+
+.chip input:checked + span {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: var(--white);
+}
+
+.chip input:focus-visible + span {
+  outline: 3px solid var(--navy);
+  outline-offset: 3px;
+}

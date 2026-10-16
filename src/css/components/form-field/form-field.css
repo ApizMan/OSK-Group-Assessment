@@ -1,0 +1,36 @@
+/* ==========================================================================
+   css/components/form-field/form-field.css
+   Form field (reusable)
+   Used for all four fields of the enquiry form. Errors are handled by css/components/form-field/form-field.js.
+   Markup: <div class="field"><label for="id">Label</label><input id="id"><p class="error" id="id-error" hidden></p></div>
+   ========================================================================== */
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px var(--space-3);
+  border: 1px solid var(--slate);
+  border-radius: var(--radius-input);
+  background: var(--white);
+  color: var(--navy);
+  font-family: var(--font-body);
+  font-size: 1rem;           /* 16px stops iOS zooming into the field */
+}
+
+.field [aria-invalid="true"] {
+  border: 2px solid var(--error);
+}
+
+.error {
+  margin-top: 6px;
+  color: var(--error);
+  font-size: 0.875rem;
+}

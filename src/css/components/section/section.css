@@ -1,0 +1,45 @@
+/* ==========================================================================
+   css/components/section/section.css
+   Section and card grid (reusable)
+   Shared page section layout used by every part of the page.
+   Markup: <section class="section"> ... </section> (add section--white for a white band).
+   Card grids: card-grid card-grid--3 or card-grid--4.
+   ========================================================================== */
+
+.section {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+  padding: var(--section-pad) var(--gutter);
+}
+
+.section--white {
+  background: var(--white);
+}
+
+.card-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .card-grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .card-grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,23 +1,10 @@
 /* ==========================================================================
-   sections.css
-   Shared section layout, benefit cards and card grids.
+   css/components/card/card.css
+   Card (reusable)
+   Used for the benefit cards and the step cards.
+   Markup: <article class="card"><h3>Title</h3><p>Text</p></article>
+   Optional icon: <span class="card__icon" data-icon="8" aria-hidden="true"></span> before the title.
    ========================================================================== */
-
-.section {
-  display: grid;
-  gap: var(--space-4);
-  align-content: start;
-  padding: var(--section-pad) var(--gutter);
-}
-
-.section--white {
-  background: var(--white);
-}
-
-.card-grid {
-  display: grid;
-  gap: var(--space-4);
-}
 
 .card {
   padding: var(--space-4);
@@ -26,8 +13,6 @@
 }
 
 .card p {
-  color: var(--slate);
-  font-size: 0.9375rem;
   line-height: 1.45;
 }
 
@@ -54,27 +39,12 @@
   font-weight: 800;
 }
 
-/* Simple text glyphs instead of image icons */
-.card:nth-child(1) .card__icon::before { content: "8"; }
-.card:nth-child(2) .card__icon::before { content: "0"; }
-.card:nth-child(3) .card__icon::before { content: "\2605"; }
-.card:nth-child(4) .card__icon::before { content: "\2713"; }
-
-@media (min-width: 640px) {
-  .card-grid--4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* The glyph comes from the data-icon attribute in the HTML */
+.card__icon::before {
+  content: attr(data-icon);
 }
 
 @media (min-width: 1024px) {
-  .card-grid--4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .card-grid--3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .card {
     padding: var(--space-5);
   }
@@ -91,10 +61,5 @@
     width: 48px;
     height: 48px;
     margin-bottom: var(--space-3);
-  }}
-
-@media (min-width: 640px) and (max-width: 1023px) {
-  .card-grid--3 {
-    grid-template-columns: repeat(2, 1fr);
   }
 }

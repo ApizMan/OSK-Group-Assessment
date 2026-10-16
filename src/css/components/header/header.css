@@ -1,6 +1,7 @@
 /* ==========================================================================
-   header.css
-   Sticky header: wordmark, section links and the Book button.
+   css/components/header/header.css
+   Site header
+   Sticky header with the wordmark, section links and the Book button.
    ========================================================================== */
 
 .site-header {
@@ -68,17 +69,6 @@
 .nav-list a:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
-}
-
-/* "a free" is hidden on very small screens so the header stays on one line */
-.btn__extra {
-  display: none;
-}
-
-@media (min-width: 480px) {
-  .btn__extra {
-    display: inline;
-  }
 }
 
 @media (min-width: 768px) {

@@ -1,0 +1,20 @@
+/* ==========================================================================
+   css/components/tag/tag.css
+   Tag (reusable)
+   Small label used on every class card. Created in JavaScript by css/components/tag/tag.js.
+   Markup: <ul class="tags"><li class="tag">Sat</li></ul>
+   ========================================================================== */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  padding: 3px var(--space-2);
+  border-radius: 6px;
+  background: var(--soft-amber);
+  font-size: 0.6875rem;
+  font-weight: 600;
+}

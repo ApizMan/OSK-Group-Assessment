@@ -62,10 +62,15 @@ Full details are in the brand panel: [`docs/wireframes/brand-rules.png`](docs/wi
 ```
 src/
 ├── index.html        the page (the deployable site is the src folder)
-├── css/              one stylesheet per part of the page
-│   ├── base.css          design tokens (custom properties), reset, accessibility helpers
-│   ├── buttons.css, header.css, hero.css, sections.css, class-finder.css,
-│   │   steps.css, faq.css, enquiry-form.css, footer.css
+├── css/
+│   ├── base.css      design tokens (custom properties), reset, accessibility helpers
+│   ├── hero.css, class-finder.css, steps.css, faq.css, enquiry-form.css
+│   │                 page-specific layout
+│   └── components/   reusable pieces, one folder each (see css/components/README.md)
+│       ├── button/, text/, section/, card/, chip/, accordion/, header/, footer/
+│       │             CSS only
+│       └── tag/, class-card/, form-field/
+│                     CSS plus a small JS file
 ├── js/
 │   ├── classes-data.js   class data (single source of truth)
 │   ├── class-finder.js   filter by age group and day
@@ -128,7 +133,8 @@ TODO: approximate hours.
 - Page text: edit `src/index.html`.
 - Classes shown in the finder: edit the `CLASSES` array in `src/js/classes-data.js`. The class cards and the form's "Preferred class" options are both built from it, so there is one place to change.
 - Colours, fonts and spacing: edit the custom properties at the top of `src/css/base.css`.
-- Styles for one part of the page (for example the FAQ): edit that part's file in `src/css/`. New stylesheets must be added to `src/index.html`; `base.css` must stay first.
+- A shared piece such as a button, card, tag or form field: edit its folder in `src/css/components/`. The change applies everywhere it is used.
+- Layout of one part of the page (for example the FAQ): edit that part's file in `src/css/`. New stylesheets or scripts must be added to `src/index.html`; `base.css` must stay first.
 
 **Redeploy:** run `firebase deploy --only hosting` from the project root.
 
@@ -150,8 +156,8 @@ TODO: approximate hours.
 | Copy | `docs/content-notes.md`, text in `src/index.html` | Drafted the first version of the wording and class and FAQ content | TODO: what I rewrote |
 | Design | Figma file, `docs/wireframes/` | Built the mobile and desktop wireframes and the brand-rules panel from a layout we agreed | TODO: what I changed |
 | Structure | `src/index.html` | Drafted the semantic HTML structure | TODO: what I edited and verified |
-| Styles | `src/css/*.css` | Wrote the stylesheet from my Figma design (tokens, mobile-first layout, breakpoints, focus styles) | TODO: what I changed, and how I checked it (widths, keyboard, contrast) |
-| Interactions | `src/js/*.js`, small edits to `src/index.html` | Wrote the class filter, the form validation and the code that fills the class options | TODO: what I changed, and how I checked it (filters, error and success states, repeated submits) |
+| Styles | `src/css/*.css`, `src/css/components/*/*.css` | Wrote the stylesheet from my Figma design (tokens, mobile-first layout, breakpoints, focus styles) | TODO: what I changed, and how I checked it (widths, keyboard, contrast) |
+| Interactions | `src/js/*.js`, `src/css/components/*/*.js`, small edits to `src/index.html` | Wrote the class filter, the form validation and the code that fills the class options | TODO: what I changed, and how I checked it (filters, error and success states, repeated submits) |
 | Planning | README outline, schedule | Suggested the plan and the section list | TODO |
 
 TODO: add a row for any further AI help (debugging, deployment, README) as I use it. If I use none for a part, say so.

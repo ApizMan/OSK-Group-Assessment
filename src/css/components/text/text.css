@@ -1,0 +1,20 @@
+/* ==========================================================================
+   css/components/text/text.css
+   Text styles (reusable)
+   Secondary text used across the page, so the colour and sizes live in one place.
+   Markup: <p class="text-muted">Supporting copy</p>
+           <p class="text-muted text-small">Short note</p>
+           <p class="text-muted text-caption">Caption or count</p>
+   ========================================================================== */
+
+.text-muted {
+  color: var(--slate);
+}
+
+.text-small {
+  font-size: 0.9375rem;
+}
+
+.text-caption {
+  font-size: 0.8125rem;
+}

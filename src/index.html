@@ -14,20 +14,31 @@
   <!-- Empty favicon avoids a 404 until you add your own -->
   <link rel="icon" href="data:,">
 
-  <!-- Styles: one file per part of the page. Order matters (base first). -->
+  <!-- Styles. Order matters: base first, then shared components, then page parts.
+       Shared components live in css/components/<name>/ (see css/components/README.md). -->
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/buttons.css">
-  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/components/text/text.css">
+  <link rel="stylesheet" href="css/components/button/button.css">
+  <link rel="stylesheet" href="css/components/section/section.css">
+  <link rel="stylesheet" href="css/components/card/card.css">
+  <link rel="stylesheet" href="css/components/chip/chip.css">
+  <link rel="stylesheet" href="css/components/tag/tag.css">
+  <link rel="stylesheet" href="css/components/class-card/class-card.css">
+  <link rel="stylesheet" href="css/components/form-field/form-field.css">
+  <link rel="stylesheet" href="css/components/accordion/accordion.css">
+  <link rel="stylesheet" href="css/components/header/header.css">
+  <link rel="stylesheet" href="css/components/footer/footer.css">
   <link rel="stylesheet" href="css/hero.css">
-  <link rel="stylesheet" href="css/sections.css">
   <link rel="stylesheet" href="css/class-finder.css">
   <link rel="stylesheet" href="css/steps.css">
   <link rel="stylesheet" href="css/faq.css">
   <link rel="stylesheet" href="css/enquiry-form.css">
-  <link rel="stylesheet" href="css/footer.css">
 
-  <!-- Scripts: classes-data.js must load before the two scripts that use it -->
+  <!-- Scripts: components and data first, then the scripts that use them -->
   <script src="js/classes-data.js" defer></script>
+  <script src="css/components/tag/tag.js" defer></script>
+  <script src="css/components/class-card/class-card.js" defer></script>
+  <script src="css/components/form-field/form-field.js" defer></script>
   <script src="js/class-finder.js" defer></script>
   <script src="js/enquiry-form.js" defer></script>
 </head>
@@ -54,9 +65,9 @@
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero__text">
         <h1 id="hero-title">Weekend coding classes where kids build real games.</h1>
-        <p class="hero__lead">Small groups, friendly teachers, no experience needed. Ages 8-12 in the Klang Valley.</p>
+        <p class="hero__lead text-muted">Small groups, friendly teachers, no experience needed. Ages 8-12 in the Klang Valley.</p>
         <a class="btn btn--primary btn--large" href="#enquiry">Book a free trial class</a>
-        <p class="hero__note">No payment. No commitment.</p>
+        <p class="hero__note text-muted text-caption">No payment. No commitment.</p>
       </div>
       <!-- TODO: replace with your own inline SVG illustration (decorative) -->
       <div class="hero__art" aria-hidden="true"></div>
@@ -67,24 +78,24 @@
       <h2 id="why-title">Why parents choose us</h2>
       <div class="card-grid card-grid--4">
         <article class="card">
-          <span class="card__icon" aria-hidden="true"></span>
+          <span class="card__icon" data-icon="8" aria-hidden="true"></span>
           <h3>Small groups</h3>
-          <p>Maximum 8 children per class, so every child gets help when they're stuck.</p>
+          <p class="text-muted text-small">Maximum 8 children per class, so every child gets help when they're stuck.</p>
         </article>
         <article class="card">
-          <span class="card__icon" aria-hidden="true"></span>
+          <span class="card__icon" data-icon="0" aria-hidden="true"></span>
           <h3>No experience needed</h3>
-          <p>We start from zero. Curiosity is the only requirement.</p>
+          <p class="text-muted text-small">We start from zero. Curiosity is the only requirement.</p>
         </article>
         <article class="card">
-          <span class="card__icon" aria-hidden="true"></span>
+          <span class="card__icon" data-icon="&#9733;" aria-hidden="true"></span>
           <h3>Projects they take home</h3>
-          <p>Every term ends with a game or animation your child can show you.</p>
+          <p class="text-muted text-small">Every term ends with a game or animation your child can show you.</p>
         </article>
         <article class="card">
-          <span class="card__icon" aria-hidden="true"></span>
+          <span class="card__icon" data-icon="&#10003;" aria-hidden="true"></span>
           <h3>Safe and supervised</h3>
-          <p>Two adults in every room, and we never ask for photos or personal accounts.</p>
+          <p class="text-muted text-small">Two adults in every room, and we never ask for photos or personal accounts.</p>
         </article>
       </div>
     </section>
@@ -95,24 +106,24 @@
 
       <form class="filters" id="class-filters">
         <fieldset class="filter-group">
-          <legend>Age group</legend>
+          <legend class="text-muted text-caption">Age group</legend>
           <label class="chip"><input type="radio" name="age" value="all" checked><span>All</span></label>
           <label class="chip"><input type="radio" name="age" value="8-9"><span>8-9</span></label>
           <label class="chip"><input type="radio" name="age" value="10-12"><span>10-12</span></label>
         </fieldset>
         <fieldset class="filter-group">
-          <legend>Day</legend>
+          <legend class="text-muted text-caption">Day</legend>
           <label class="chip"><input type="radio" name="day" value="all" checked><span>All</span></label>
           <label class="chip"><input type="radio" name="day" value="Sat"><span>Saturday</span></label>
           <label class="chip"><input type="radio" name="day" value="Sun"><span>Sunday</span></label>
         </fieldset>
       </form>
 
-      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <p class="result-count text-muted text-caption" id="result-count" aria-live="polite"></p>
       <!-- Class cards are rendered here by js/class-finder.js -->
       <div class="card-grid card-grid--3" id="class-list"></div>
       <noscript><p>Turn on JavaScript to see and filter the class list.</p></noscript>
-      <p class="empty-state" id="empty-state" hidden>No classes match those filters. Try another day or age group.</p>
+      <p class="empty-state text-muted" id="empty-state" hidden>No classes match those filters. Try another day or age group.</p>
     </section>
 
     <!-- 05 How a trial class works -->
@@ -121,15 +132,15 @@
       <ol class="steps">
         <li class="card">
           <h3>Send an enquiry</h3>
-          <p>Tell us your child's age and which class looks fun.</p>
+          <p class="text-muted text-small">Tell us your child's age and which class looks fun.</p>
         </li>
         <li class="card">
           <h3>We confirm a time</h3>
-          <p>A real person replies within two working days.</p>
+          <p class="text-muted text-small">A real person replies within two working days.</p>
         </li>
         <li class="card">
           <h3>Your child tries a class</h3>
-          <p>Free, 60 minutes, and parents are welcome to stay.</p>
+          <p class="text-muted text-small">Free, 60 minutes, and parents are welcome to stay.</p>
         </li>
       </ol>
     </section>
@@ -138,36 +149,36 @@
     <section class="section faq" id="faq" aria-labelledby="faq-title">
       <div class="faq__intro">
         <h2 id="faq-title">Questions parents ask</h2>
-        <p>Still unsure? Send an enquiry and a real person will reply.</p>
+        <p class="text-muted">Still unsure? Send an enquiry and a real person will reply.</p>
       </div>
       <div class="faq__list">
         <details open>
           <summary>Does my child need a laptop?</summary>
-          <p>No. We provide laptops for every class.</p>
+          <p class="text-muted text-small">No. We provide laptops for every class.</p>
         </details>
         <details>
           <summary>What if my child has never coded?</summary>
-          <p>Perfect. Beginner classes assume no experience.</p>
+          <p class="text-muted text-small">Perfect. Beginner classes assume no experience.</p>
         </details>
         <details>
           <summary>How much do classes cost after the trial?</summary>
-          <p>Terms are RM 360 for 8 weekly sessions. The trial is free.</p>
+          <p class="text-muted text-small">Terms are RM 360 for 8 weekly sessions. The trial is free.</p>
         </details>
         <details>
           <summary>Is it safe?</summary>
-          <p>Classes are supervised by two adults, and children only use our offline classroom accounts.</p>
+          <p class="text-muted text-small">Classes are supervised by two adults, and children only use our offline classroom accounts.</p>
         </details>
         <details>
           <summary>What if my child doesn't enjoy it?</summary>
-          <p>There's no obligation after the trial. If they join and change their mind in the first two weeks, we refund the rest of the term.</p>
+          <p class="text-muted text-small">There's no obligation after the trial. If they join and change their mind in the first two weeks, we refund the rest of the term.</p>
         </details>
         <details>
           <summary>Can siblings join together?</summary>
-          <p>Yes, if they're in the same age group. Siblings get 10% off.</p>
+          <p class="text-muted text-small">Yes, if they're in the same age group. Siblings get 10% off.</p>
         </details>
         <details>
           <summary>How big are the classes?</summary>
-          <p>No more than 8 children per class.</p>
+          <p class="text-muted text-small">No more than 8 children per class.</p>
         </details>
       </div>
     </section>
@@ -176,7 +187,7 @@
     <section class="section section--white enquiry" id="enquiry" aria-labelledby="enquiry-title">
       <div class="enquiry__intro">
         <h2 id="enquiry-title">Book your free trial</h2>
-        <p>Tell us about your child and a real person will confirm a time within two working days.</p>
+        <p class="text-muted">Tell us about your child and a real person will confirm a time within two working days.</p>
         <p class="notice"><strong>This is a demo form. Nothing you type is sent or saved.</strong></p>
       </div>
 

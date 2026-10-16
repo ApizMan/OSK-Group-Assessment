@@ -1,11 +1,11 @@
 /* ==========================================================================
-   enquiry-form.css
-   Enquiry form: fields, errors and success message.
+   css/enquiry-form.css
+   Enquiry form layout
+   Form grid, demo notice and success message. Uses the form-field and button components.
    ========================================================================== */
 
 .enquiry__intro p {
   margin-top: var(--space-3);
-  color: var(--slate);
 }
 
 .enquiry__intro .notice {
@@ -21,37 +21,6 @@
   display: grid;
   gap: var(--space-4);
 }
-
-.field label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 0.8125rem;
-  font-weight: 600;
-}
-
-.field input,
-.field select {
-  width: 100%;
-  min-height: 44px;
-  padding: 10px var(--space-3);
-  border: 1px solid var(--slate);
-  border-radius: var(--radius-input);
-  background: var(--white);
-  color: var(--navy);
-  font-family: var(--font-body);
-  font-size: 1rem;           /* 16px stops iOS zooming into the field */
-}
-
-.field [aria-invalid="true"] {
-  border: 2px solid var(--error);
-}
-
-.error {
-  margin-top: 6px;
-  color: var(--error);
-  font-size: 0.875rem;
-}
-
 
 .form__status {
   padding: var(--space-3) var(--space-4);

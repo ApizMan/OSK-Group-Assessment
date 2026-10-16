@@ -1,7 +1,8 @@
 /* ==========================================================================
    enquiry-form.js
    Enquiry form: demo validation. Nothing is sent, saved or logged.
-   Needs CLASSES from classes-data.js.
+   Needs CLASSES from classes-data.js and showError()/clearError() from
+   css/components/form-field/form-field.js.
    ========================================================================== */
 
 'use strict';
@@ -42,20 +43,6 @@ const validators = [
     message: 'Choose a class.',
   },
 ];
-
-function showError(field, message) {
-  const error = document.getElementById(`${field.id}-error`);
-  error.textContent = message;
-  error.hidden = false;
-  field.setAttribute('aria-invalid', 'true');
-}
-
-function clearError(field) {
-  const error = document.getElementById(`${field.id}-error`);
-  error.textContent = '';
-  error.hidden = true;
-  field.removeAttribute('aria-invalid');
-}
 
 // Returns the first invalid field (so we can move focus to it), or null
 function validateForm() {

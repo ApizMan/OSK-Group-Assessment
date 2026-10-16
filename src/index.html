@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CodeCamp Kids KL | Weekend coding classes for ages 8-12</title>
+  <meta name="description" content="Weekend coding classes for children aged 8-12 in the Klang Valley. Small groups, friendly teachers and no experience needed. Book a free trial class.">
+
+  <!-- Fonts: Nunito (headings) and Inter (body) from Google Fonts. Credit them in the README. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Nunito:wght@800&display=swap" rel="stylesheet">
+
+  <!-- Empty favicon avoids a 404 until you add your own -->
+  <link rel="icon" href="data:,">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- 01 Header -->
+  <header class="site-header">
+    <a class="wordmark" href="#top">CodeCamp Kids KL</a>
+    <nav aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="#why-us">Why us</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--primary" href="#enquiry">Book a free trial</a>
+  </header>
+
+  <main id="main">
+
+    <!-- 02 Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__text">
+        <h1 id="hero-title">Weekend coding classes where kids build real games.</h1>
+        <p class="hero__lead">Small groups, friendly teachers, no experience needed. Ages 8-12 in the Klang Valley.</p>
+        <a class="btn btn--primary btn--large" href="#enquiry">Book a free trial class</a>
+        <p class="hero__note">No payment. No commitment.</p>
+      </div>
+      <!-- TODO: replace with your own inline SVG illustration (decorative) -->
+      <div class="hero__art" aria-hidden="true"></div>
+    </section>
+
+    <!-- 03 Key benefits -->
+    <section class="section section--white" id="why-us" aria-labelledby="why-title">
+      <h2 id="why-title">Why parents choose us</h2>
+      <div class="card-grid card-grid--4">
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"></span>
+          <h3>Small groups</h3>
+          <p>Maximum 8 children per class, so every child gets help when they're stuck.</p>
+        </article>
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"></span>
+          <h3>No experience needed</h3>
+          <p>We start from zero. Curiosity is the only requirement.</p>
+        </article>
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"></span>
+          <h3>Projects they take home</h3>
+          <p>Every term ends with a game or animation your child can show you.</p>
+        </article>
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"></span>
+          <h3>Safe and supervised</h3>
+          <p>Two adults in every room, and we never ask for photos or personal accounts.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 04 Class finder (interaction 1: filter) -->
+    <section class="section" id="classes" aria-labelledby="classes-title">
+      <h2 id="classes-title">Find a class</h2>
+
+      <form class="filters" id="class-filters">
+        <fieldset class="filter-group">
+          <legend>Age group</legend>
+          <label class="chip"><input type="radio" name="age" value="all" checked><span>All</span></label>
+          <label class="chip"><input type="radio" name="age" value="8-9"><span>8-9</span></label>
+          <label class="chip"><input type="radio" name="age" value="10-12"><span>10-12</span></label>
+        </fieldset>
+        <fieldset class="filter-group">
+          <legend>Day</legend>
+          <label class="chip"><input type="radio" name="day" value="all" checked><span>All</span></label>
+          <label class="chip"><input type="radio" name="day" value="Sat"><span>Saturday</span></label>
+          <label class="chip"><input type="radio" name="day" value="Sun"><span>Sunday</span></label>
+        </fieldset>
+      </form>
+
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <!-- Class cards are rendered here by js/main.js -->
+      <div class="card-grid card-grid--3" id="class-list"></div>
+      <p class="empty-state" id="empty-state" hidden>No classes match those filters. Try another day or age group.</p>
+    </section>
+
+    <!-- 05 How a trial class works -->
+    <section class="section section--white" id="how-it-works" aria-labelledby="how-title">
+      <h2 id="how-title">How a trial class works</h2>
+      <ol class="steps">
+        <li class="card">
+          <h3>Send an enquiry</h3>
+          <p>Tell us your child's age and which class looks fun.</p>
+        </li>
+        <li class="card">
+          <h3>We confirm a time</h3>
+          <p>A real person replies within two working days.</p>
+        </li>
+        <li class="card">
+          <h3>Your child tries a class</h3>
+          <p>Free, 60 minutes, and parents are welcome to stay.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 06 Parent FAQ (interaction 2: expandable information) -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="faq__intro">
+        <h2 id="faq-title">Questions parents ask</h2>
+        <p>Still unsure? Send an enquiry and a real person will reply.</p>
+      </div>
+      <div class="faq__list">
+        <details open>
+          <summary>Does my child need a laptop?</summary>
+          <p>No. We provide laptops for every class.</p>
+        </details>
+        <details>
+          <summary>What if my child has never coded?</summary>
+          <p>Perfect. Beginner classes assume no experience.</p>
+        </details>
+        <details>
+          <summary>How much do classes cost after the trial?</summary>
+          <p>Terms are RM 360 for 8 weekly sessions. The trial is free.</p>
+        </details>
+        <details>
+          <summary>Is it safe?</summary>
+          <p>Classes are supervised by two adults, and children only use our offline classroom accounts.</p>
+        </details>
+        <details>
+          <summary>What if my child doesn't enjoy it?</summary>
+          <p>There's no obligation after the trial. If they join and change their mind in the first two weeks, we refund the rest of the term.</p>
+        </details>
+        <details>
+          <summary>Can siblings join together?</summary>
+          <p>Yes, if they're in the same age group. Siblings get 10% off.</p>
+        </details>
+        <details>
+          <summary>How big are the classes?</summary>
+          <p>No more than 8 children per class.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- 07 Enquiry form (interaction 3: validated demo form) -->
+    <section class="section section--white enquiry" id="enquiry" aria-labelledby="enquiry-title">
+      <div class="enquiry__intro">
+        <h2 id="enquiry-title">Book your free trial</h2>
+        <p>Tell us about your child and a real person will confirm a time within two working days.</p>
+        <p class="notice"><strong>This is a demo form. Nothing you type is sent or saved.</strong></p>
+      </div>
+
+      <form class="form" id="enquiry-form" novalidate>
+        <div class="field">
+          <label for="parent-name">Parent's name</label>
+          <input type="text" id="parent-name" name="parent-name" autocomplete="off" aria-describedby="parent-name-error">
+          <p class="error" id="parent-name-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="off" aria-describedby="email-error">
+          <p class="error" id="email-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="child-age">Child's age</label>
+          <select id="child-age" name="child-age" aria-describedby="child-age-error">
+            <option value="">Choose age</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+          </select>
+          <p class="error" id="child-age-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="preferred-class">Preferred class</label>
+          <select id="preferred-class" name="preferred-class" aria-describedby="preferred-class-error">
+            <option value="">Choose a class</option>
+            <option>Block Builders (ages 8-9, Sat)</option>
+            <option>Story Makers (ages 8-9, Sun)</option>
+            <option>Game Lab 1 (ages 10-12, Sat)</option>
+            <option>Game Lab 2 (ages 10-12, Sun)</option>
+            <option>Web Starters (ages 10-12, Sat)</option>
+            <option>Robot Brains (ages 10-12, Sun)</option>
+          </select>
+          <p class="error" id="preferred-class-error" hidden></p>
+        </div>
+
+        <button class="btn btn--primary" type="submit">Send enquiry</button>
+        <p class="form__status" id="form-status" role="status" hidden></p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- 08 Footer -->
+  <footer class="site-footer">
+    <p>CodeCamp Kids KL is a fictional organisation created for a design assessment. Address, prices and classes are demo content.</p>
+    <p class="site-footer__credits">Credits: Nunito and Inter fonts (Google Fonts, SIL Open Font License).</p>
+  </footer>
+</body>
+</html>

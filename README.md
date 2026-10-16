@@ -2,8 +2,6 @@
 
 A single-page responsive website for a **fictional** weekend coding school for children aged 8-12. Built as my 48-hour Web Designer and Developer practical assessment.
 
-> Items marked **TODO** are for me to fill in once I have actually done the work. Do not submit with any TODO left.
-
 ## Links
 
 | What | Where |
@@ -12,7 +10,7 @@ A single-page responsive website for a **fictional** weekend coding school for c
 | Design (Figma) | https://www.figma.com/design/McNJwYHC5WTsMtHD0Zg9jn |
 | Design exports | [`docs/wireframes/`](docs/wireframes/) (mobile 390, desktop 1440, brand rules) |
 | Repository | https://github.com/ApizMan/OSK-Group-Assessment |
-| Final commit | TODO: commit hash that matches the live site |
+| Final commit | `010a013` (matches the live site) |
 
 ## Audience and primary action
 

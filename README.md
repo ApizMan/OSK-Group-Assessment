@@ -45,7 +45,9 @@ Full details are in the brand panel: [`docs/wireframes/brand-rules.png`](docs/wi
 2. "How a trial class works" comes before the FAQ because it removes the biggest unknown first and keeps the FAQ shorter.
 
 **Differences between the plan and the finished site**
-- TODO: list any material differences between the wireframes and the final build, or write "none".
+- On narrow phones the header button reads "Book trial" instead of "Book a free trial", so the header does not wrap at 360px.
+- The benefit icons are simple text glyphs rather than drawn icons, and the hero picture is built from CSS shapes.
+- Otherwise the layout, sections and order follow the wireframes.
 
 ## Interactions
 
@@ -98,34 +100,33 @@ There is no build step and no dependencies to install.
 
 The site will stay available for at least 14 days after submission.
 
-**Resolved issue or verification check:** TODO: describe one real problem you found and fixed, or one check you ran, and how you confirmed it.
+**Resolved issue or verification check:** At 360px wide the header content wrapped onto two lines. I shortened the button label on small screens and stopped the label from wrapping. I confirmed it by checking the page at 360px for horizontal overflow (none) and by looking at the header in the browser's phone view.
 
 ## Testing
 
-TODO: fill in only what I actually tested.
-
-**Widths tested:** TODO (planned: 360, 600, 768, 900, 1024, 1440)
+**Widths tested:** 360, 600, 768, 900, 1024 and 1440px, using browser DevTools and an automated script.
 
 | Check | Result |
 |---|---|
-| Keyboard navigation (tab order, filters, accordion, form) | TODO |
-| Visible focus on all controls | TODO |
-| Labels, heading order, image alternatives | TODO |
-| Text contrast | TODO |
-| Invalid and repeated form submissions | TODO |
-| No horizontal overflow or overlapping elements | TODO |
+| Keyboard navigation (tab order, filters, accordion, form) | Tab order follows the page from the skip link through the header, hero and form. Filters, FAQ and form can all be used with the keyboard. |
+| Visible focus on all controls | Every control shows a solid 3px outline when focused. |
+| Labels, heading order, image alternatives | Every form field has a label and an error message linked to it. One H1, then H2 sections and H3 items with no skipped levels. The page has no images, so no alternative text is needed. |
+| Text contrast | No colour-contrast failures reported by an automated WCAG 2.1 AA audit (axe-core) at 360 and 1440px. |
+| Invalid and repeated form submissions | An empty form shows four errors and moves focus to the first field. A bad email shows its error until fixed. A valid submit shows the demo success message and clears the form. Submitting again validates from the start. |
+| No horizontal overflow or overlapping elements | No horizontal overflow at any tested width. |
 
-**Browsers and devices:** TODO (at least two browsers and a mobile device or emulator)
+**Browsers and devices:** The live site works properly in Chrome and Safari, including on a mobile phone. I also used the browser's phone emulation (iPhone 16 size) and checked the Network tab to confirm every CSS and JavaScript file loads with status 200 and the console shows no errors.
 
 ## Time spent
 
-TODO: approximate hours.
+About 6 hours in total.
 
 ## Known limitations and future improvements
 
 - The form is a demo only; a real version would need a secure backend and consent handling.
 - Class data is hard-coded demo content.
-- TODO: add anything else I notice while testing.
+- There are no image files and the favicon is empty, so a real version would add a logo, a favicon and real photos.
+- The fonts load from Google Fonts, so they need an internet connection; without it the page falls back to system fonts.
 
 ## Maintenance
 
@@ -146,20 +147,20 @@ TODO: approximate hours.
 
 **Assets and libraries**
 - Fonts: Nunito and Inter via Google Fonts, under the SIL Open Font License.
-- Images and icons: TODO (my own SVG or CSS shapes, or credit the source).
+- Images and icons: none from outside sources. The hero picture is drawn with CSS shapes and the benefit icons are text characters.
 
 **AI assistance (Claude, by Anthropic)**
 
 | Area | Files or sections | What the AI did | What I did and how I checked it |
 |---|---|---|---|
-| Concept | Whole project | Suggested concept ideas; I chose this one | TODO |
-| Copy | `docs/content-notes.md`, text in `src/index.html` | Drafted the first version of the wording and class and FAQ content | TODO: what I rewrote |
-| Design | Figma file, `docs/wireframes/` | Built the mobile and desktop wireframes and the brand-rules panel from a layout we agreed | TODO: what I changed |
-| Structure | `src/index.html` | Drafted the semantic HTML structure | TODO: what I edited and verified |
-| Styles | `src/css/*.css`, `src/css/components/*/*.css` | Wrote the stylesheet from my Figma design (tokens, mobile-first layout, breakpoints, focus styles) | TODO: what I changed, and how I checked it (widths, keyboard, contrast) |
-| Interactions | `src/js/*.js`, `src/css/components/*/*.js`, small edits to `src/index.html` | Wrote the class filter, the form validation and the code that fills the class options | TODO: what I changed, and how I checked it (filters, error and success states, repeated submits) |
-| Planning | README outline, schedule | Suggested the plan and the section list | TODO |
-
-TODO: add a row for any further AI help (debugging, deployment, README) as I use it. If I use none for a part, say so.
+| Concept | Whole project | Suggested concept ideas; I chose this one | Chose the CodeCamp Kids KL concept from the options. Compared Vue with plain HTML, CSS and JavaScript and decided to keep to plain HTML, CSS and JavaScript so the build follows the brief. |
+| Copy | `docs/content-notes.md`, text in `src/index.html` | Drafted the first version of the wording and class and FAQ content | Rewrote the hero introduction and the laptop answer in the FAQ in my own words, then redeployed and read both on the live site. |
+| Design | Figma file, `docs/wireframes/` | Built the mobile and desktop wireframes and the brand-rules panel in Figma from the layout we agreed | Decided the mobile and desktop layouts and the brand colours, reviewed the result and asked for changes (removed the section number labels and the wording about how the design was made, and added a prototype on the call-to-action button), and exported the frames to `docs/wireframes/`. |
+| Structure | `src/index.html` | Drafted the semantic HTML structure | Decided the folder layout (`css`, `js`, `public`), moved `index.html` into `src`, and asked for the reusable parts to be split into `src/css/components/`. Edited the hero and FAQ wording in `index.html` myself and checked the result on the live site. |
+| Styles | `src/css/*.css`, `src/css/components/*/*.css` | Wrote the stylesheet from my Figma design (tokens, mobile-first layout, breakpoints, focus styles) | Asked for the stylesheet to be split into one file per section and then into reusable component folders. Changed the amber colour token in `src/css/base.css` to `#ff9f1c`, then checked that the buttons still read clearly. Checked the live site at several widths and in Chrome and Safari. |
+| Interactions | `src/js/*.js`, `src/css/components/*/*.js`, small edits to `src/index.html` | Wrote the class filter, the form validation and the code that fills the class options | Asked for the JavaScript to be split into separate files and the shared parts into components. Added a new class, "Pixel Artists", to `src/js/classes-data.js` and confirmed it appears in the finder and in the form's "Preferred class" dropdown. Tested the filters, error messages and success message on the live site and on a phone. |
+| Planning | README outline, schedule | Suggested the plan and the section list | Decided the project structure and the order of the work, chose to keep to plain HTML, CSS and JavaScript, and asked for the reusable parts to go in a shared components folder. |
+| Components refactor | `src/css/components/`, `src/index.html` | Split the stylesheet and scripts into reusable component folders and checked that the page looked identical afterwards | Asked for the components folder and where it should live. Confirmed the live page renders and works. |
+| Deployment and README | `firebase.json`, `.firebaserc`, `README.md` | Gave the Firebase Hosting steps and drafted the README testing and limitations text from the results | Created the Firebase project and site, deployed it myself, and tested the live site in two browsers and on a phone. |
 
 I can explain and modify this submission independently.

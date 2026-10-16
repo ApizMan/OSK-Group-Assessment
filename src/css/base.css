@@ -5,15 +5,15 @@
 
 :root {
   /* Colours (contrast ratios are in docs/wireframes/brand-rules.png) */
-  --navy: #1b2a4a;          /* text, headings, footer */
-  --amber: #ffb020;         /* call-to-action buttons only */
-  --amber-dark: #f29d00;    /* button hover */
-  --cream: #faf7f0;         /* page background */
-  --white: #ffffff;         /* header, cards, form sections */
-  --slate: #5b6579;         /* secondary text and input borders */
-  --soft-amber: #fff3d6;    /* tags and notices */
-  --line: #cbd1dc;          /* decorative borders */
-  --error: #b3123f;         /* error text and borders */
+  --navy: #1b2a4a; /* text, headings, footer */
+  --amber: #ff9f1c; /* call-to-action buttons only */
+  --amber-dark: #f29d00; /* button hover */
+  --cream: #faf7f0; /* page background */
+  --white: #ffffff; /* header, cards, form sections */
+  --slate: #5b6579; /* secondary text and input borders */
+  --soft-amber: #fff3d6; /* tags and notices */
+  --line: #cbd1dc; /* decorative borders */
+  --error: #b3123f; /* error text and borders */
   --footer-text: #b8c0d0;
 
   /* Typography */
@@ -21,9 +21,9 @@
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   /* Shape */
-  --radius: 12px;           /* buttons and cards */
+  --radius: 12px; /* buttons and cards */
   --radius-input: 8px;
-  --radius-pill: 999px;     /* filter chips */
+  --radius-pill: 999px; /* filter chips */
 
   /* Spacing scale */
   --space-1: 4px;

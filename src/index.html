@@ -1,242 +1,374 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CodeCamp Kids KL | Weekend coding classes for ages 8-12</title>
-  <meta name="description" content="Weekend coding classes for children aged 8-12 in the Klang Valley. Small groups, friendly teachers and no experience needed. Book a free trial class.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CodeCamp Kids KL | Weekend coding classes for ages 8-12</title>
+    <meta
+      name="description"
+      content="Weekend coding classes for children aged 8-12 in the Klang Valley. Small groups, friendly teachers and no experience needed. Book a free trial class."
+    />
 
-  <!-- Fonts: Nunito (headings) and Inter (body) from Google Fonts. Credit them in the README. -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Nunito:wght@800&display=swap" rel="stylesheet">
+    <!-- Fonts: Nunito (headings) and Inter (body) from Google Fonts. Credit them in the README. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Nunito:wght@800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Empty favicon avoids a 404 until you add your own -->
-  <link rel="icon" href="data:,">
+    <!-- Empty favicon avoids a 404 until you add your own -->
+    <link rel="icon" href="data:," />
 
-  <!-- Styles. Order matters: base first, then shared components, then page parts.
+    <!-- Styles. Order matters: base first, then shared components, then page parts.
        Shared components live in css/components/<name>/ (see css/components/README.md). -->
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components/text/text.css">
-  <link rel="stylesheet" href="css/components/button/button.css">
-  <link rel="stylesheet" href="css/components/section/section.css">
-  <link rel="stylesheet" href="css/components/card/card.css">
-  <link rel="stylesheet" href="css/components/chip/chip.css">
-  <link rel="stylesheet" href="css/components/tag/tag.css">
-  <link rel="stylesheet" href="css/components/class-card/class-card.css">
-  <link rel="stylesheet" href="css/components/form-field/form-field.css">
-  <link rel="stylesheet" href="css/components/accordion/accordion.css">
-  <link rel="stylesheet" href="css/components/header/header.css">
-  <link rel="stylesheet" href="css/components/footer/footer.css">
-  <link rel="stylesheet" href="css/hero.css">
-  <link rel="stylesheet" href="css/class-finder.css">
-  <link rel="stylesheet" href="css/steps.css">
-  <link rel="stylesheet" href="css/faq.css">
-  <link rel="stylesheet" href="css/enquiry-form.css">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components/text/text.css" />
+    <link rel="stylesheet" href="css/components/button/button.css" />
+    <link rel="stylesheet" href="css/components/section/section.css" />
+    <link rel="stylesheet" href="css/components/card/card.css" />
+    <link rel="stylesheet" href="css/components/chip/chip.css" />
+    <link rel="stylesheet" href="css/components/tag/tag.css" />
+    <link rel="stylesheet" href="css/components/class-card/class-card.css" />
+    <link rel="stylesheet" href="css/components/form-field/form-field.css" />
+    <link rel="stylesheet" href="css/components/accordion/accordion.css" />
+    <link rel="stylesheet" href="css/components/header/header.css" />
+    <link rel="stylesheet" href="css/components/footer/footer.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/class-finder.css" />
+    <link rel="stylesheet" href="css/steps.css" />
+    <link rel="stylesheet" href="css/faq.css" />
+    <link rel="stylesheet" href="css/enquiry-form.css" />
 
-  <!-- Scripts: components and data first, then the scripts that use them -->
-  <script src="js/classes-data.js" defer></script>
-  <script src="css/components/tag/tag.js" defer></script>
-  <script src="css/components/class-card/class-card.js" defer></script>
-  <script src="css/components/form-field/form-field.js" defer></script>
-  <script src="js/class-finder.js" defer></script>
-  <script src="js/enquiry-form.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+    <!-- Scripts: components and data first, then the scripts that use them -->
+    <script src="js/classes-data.js" defer></script>
+    <script src="css/components/tag/tag.js" defer></script>
+    <script src="css/components/class-card/class-card.js" defer></script>
+    <script src="css/components/form-field/form-field.js" defer></script>
+    <script src="js/class-finder.js" defer></script>
+    <script src="js/enquiry-form.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- 01 Header -->
-  <header class="site-header">
-    <a class="wordmark" href="#top">CodeCamp Kids KL</a>
-    <nav aria-label="Primary">
-      <ul class="nav-list">
-        <li><a href="#why-us">Why us</a></li>
-        <li><a href="#classes">Classes</a></li>
-        <li><a href="#how-it-works">How it works</a></li>
-        <li><a href="#faq">FAQ</a></li>
-      </ul>
-    </nav>
-    <a class="btn btn--primary" href="#enquiry">Book <span class="btn__extra">a free </span>trial</a>
-  </header>
+    <!-- 01 Header -->
+    <header class="site-header">
+      <a class="wordmark" href="#top">CodeCamp Kids KL</a>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#why-us">Why us</a></li>
+          <li><a href="#classes">Classes</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary" href="#enquiry"
+        >Book <span class="btn__extra">a free </span>trial</a
+      >
+    </header>
 
-  <main id="main">
+    <main id="main">
+      <!-- 02 Hero -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero__text">
+          <h1 id="hero-title">
+            Weekend coding classes where kids build real games.
+          </h1>
+          <p class="text-muted text-small">
+            No laptop needed. We bring one for every child in every class.
+          </p>
+          <a class="btn btn--primary btn--large" href="#enquiry"
+            >Book a free trial class</a
+          >
+          <p class="hero__note text-muted text-caption">
+            No payment. No commitment.
+          </p>
+        </div>
+        <!-- TODO: replace with your own inline SVG illustration (decorative) -->
+        <div class="hero__art" aria-hidden="true"></div>
+      </section>
 
-    <!-- 02 Hero -->
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero__text">
-        <h1 id="hero-title">Weekend coding classes where kids build real games.</h1>
-        <p class="hero__lead text-muted">Small groups, friendly teachers, no experience needed. Ages 8-12 in the Klang Valley.</p>
-        <a class="btn btn--primary btn--large" href="#enquiry">Book a free trial class</a>
-        <p class="hero__note text-muted text-caption">No payment. No commitment.</p>
-      </div>
-      <!-- TODO: replace with your own inline SVG illustration (decorative) -->
-      <div class="hero__art" aria-hidden="true"></div>
-    </section>
+      <!-- 03 Key benefits -->
+      <section
+        class="section section--white"
+        id="why-us"
+        aria-labelledby="why-title"
+      >
+        <h2 id="why-title">Why parents choose us</h2>
+        <div class="card-grid card-grid--4">
+          <article class="card">
+            <span class="card__icon" data-icon="8" aria-hidden="true"></span>
+            <h3>Small groups</h3>
+            <p class="text-muted text-small">
+              Maximum 8 children per class, so every child gets help when
+              they're stuck.
+            </p>
+          </article>
+          <article class="card">
+            <span class="card__icon" data-icon="0" aria-hidden="true"></span>
+            <h3>No experience needed</h3>
+            <p class="text-muted text-small">
+              We start from zero. Curiosity is the only requirement.
+            </p>
+          </article>
+          <article class="card">
+            <span
+              class="card__icon"
+              data-icon="&#9733;"
+              aria-hidden="true"
+            ></span>
+            <h3>Projects they take home</h3>
+            <p class="text-muted text-small">
+              Every term ends with a game or animation your child can show you.
+            </p>
+          </article>
+          <article class="card">
+            <span
+              class="card__icon"
+              data-icon="&#10003;"
+              aria-hidden="true"
+            ></span>
+            <h3>Safe and supervised</h3>
+            <p class="text-muted text-small">
+              Two adults in every room, and we never ask for photos or personal
+              accounts.
+            </p>
+          </article>
+        </div>
+      </section>
 
-    <!-- 03 Key benefits -->
-    <section class="section section--white" id="why-us" aria-labelledby="why-title">
-      <h2 id="why-title">Why parents choose us</h2>
-      <div class="card-grid card-grid--4">
-        <article class="card">
-          <span class="card__icon" data-icon="8" aria-hidden="true"></span>
-          <h3>Small groups</h3>
-          <p class="text-muted text-small">Maximum 8 children per class, so every child gets help when they're stuck.</p>
-        </article>
-        <article class="card">
-          <span class="card__icon" data-icon="0" aria-hidden="true"></span>
-          <h3>No experience needed</h3>
-          <p class="text-muted text-small">We start from zero. Curiosity is the only requirement.</p>
-        </article>
-        <article class="card">
-          <span class="card__icon" data-icon="&#9733;" aria-hidden="true"></span>
-          <h3>Projects they take home</h3>
-          <p class="text-muted text-small">Every term ends with a game or animation your child can show you.</p>
-        </article>
-        <article class="card">
-          <span class="card__icon" data-icon="&#10003;" aria-hidden="true"></span>
-          <h3>Safe and supervised</h3>
-          <p class="text-muted text-small">Two adults in every room, and we never ask for photos or personal accounts.</p>
-        </article>
-      </div>
-    </section>
+      <!-- 04 Class finder (interaction 1: filter) -->
+      <section class="section" id="classes" aria-labelledby="classes-title">
+        <h2 id="classes-title">Find a class</h2>
 
-    <!-- 04 Class finder (interaction 1: filter) -->
-    <section class="section" id="classes" aria-labelledby="classes-title">
-      <h2 id="classes-title">Find a class</h2>
+        <form class="filters" id="class-filters">
+          <fieldset class="filter-group">
+            <legend class="text-muted text-caption">Age group</legend>
+            <label class="chip"
+              ><input type="radio" name="age" value="all" checked /><span
+                >All</span
+              ></label
+            >
+            <label class="chip"
+              ><input type="radio" name="age" value="8-9" /><span
+                >8-9</span
+              ></label
+            >
+            <label class="chip"
+              ><input type="radio" name="age" value="10-12" /><span
+                >10-12</span
+              ></label
+            >
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend class="text-muted text-caption">Day</legend>
+            <label class="chip"
+              ><input type="radio" name="day" value="all" checked /><span
+                >All</span
+              ></label
+            >
+            <label class="chip"
+              ><input type="radio" name="day" value="Sat" /><span
+                >Saturday</span
+              ></label
+            >
+            <label class="chip"
+              ><input type="radio" name="day" value="Sun" /><span
+                >Sunday</span
+              ></label
+            >
+          </fieldset>
+        </form>
 
-      <form class="filters" id="class-filters">
-        <fieldset class="filter-group">
-          <legend class="text-muted text-caption">Age group</legend>
-          <label class="chip"><input type="radio" name="age" value="all" checked><span>All</span></label>
-          <label class="chip"><input type="radio" name="age" value="8-9"><span>8-9</span></label>
-          <label class="chip"><input type="radio" name="age" value="10-12"><span>10-12</span></label>
-        </fieldset>
-        <fieldset class="filter-group">
-          <legend class="text-muted text-caption">Day</legend>
-          <label class="chip"><input type="radio" name="day" value="all" checked><span>All</span></label>
-          <label class="chip"><input type="radio" name="day" value="Sat"><span>Saturday</span></label>
-          <label class="chip"><input type="radio" name="day" value="Sun"><span>Sunday</span></label>
-        </fieldset>
-      </form>
+        <p
+          class="result-count text-muted text-caption"
+          id="result-count"
+          aria-live="polite"
+        ></p>
+        <!-- Class cards are rendered here by js/class-finder.js -->
+        <div class="card-grid card-grid--3" id="class-list"></div>
+        <noscript
+          ><p>Turn on JavaScript to see and filter the class list.</p></noscript
+        >
+        <p class="empty-state text-muted" id="empty-state" hidden>
+          No classes match those filters. Try another day or age group.
+        </p>
+      </section>
 
-      <p class="result-count text-muted text-caption" id="result-count" aria-live="polite"></p>
-      <!-- Class cards are rendered here by js/class-finder.js -->
-      <div class="card-grid card-grid--3" id="class-list"></div>
-      <noscript><p>Turn on JavaScript to see and filter the class list.</p></noscript>
-      <p class="empty-state text-muted" id="empty-state" hidden>No classes match those filters. Try another day or age group.</p>
-    </section>
+      <!-- 05 How a trial class works -->
+      <section
+        class="section section--white"
+        id="how-it-works"
+        aria-labelledby="how-title"
+      >
+        <h2 id="how-title">How a trial class works</h2>
+        <ol class="steps">
+          <li class="card">
+            <h3>Send an enquiry</h3>
+            <p class="text-muted text-small">
+              Tell us your child's age and which class looks fun.
+            </p>
+          </li>
+          <li class="card">
+            <h3>We confirm a time</h3>
+            <p class="text-muted text-small">
+              A real person replies within two working days.
+            </p>
+          </li>
+          <li class="card">
+            <h3>Your child tries a class</h3>
+            <p class="text-muted text-small">
+              Free, 60 minutes, and parents are welcome to stay.
+            </p>
+          </li>
+        </ol>
+      </section>
 
-    <!-- 05 How a trial class works -->
-    <section class="section section--white" id="how-it-works" aria-labelledby="how-title">
-      <h2 id="how-title">How a trial class works</h2>
-      <ol class="steps">
-        <li class="card">
-          <h3>Send an enquiry</h3>
-          <p class="text-muted text-small">Tell us your child's age and which class looks fun.</p>
-        </li>
-        <li class="card">
-          <h3>We confirm a time</h3>
-          <p class="text-muted text-small">A real person replies within two working days.</p>
-        </li>
-        <li class="card">
-          <h3>Your child tries a class</h3>
-          <p class="text-muted text-small">Free, 60 minutes, and parents are welcome to stay.</p>
-        </li>
-      </ol>
-    </section>
+      <!-- 06 Parent FAQ (interaction 2: expandable information) -->
+      <section class="section faq" id="faq" aria-labelledby="faq-title">
+        <div class="faq__intro">
+          <h2 id="faq-title">Questions parents ask</h2>
+          <p class="text-muted">
+            Still unsure? Send an enquiry and a real person will reply.
+          </p>
+        </div>
+        <div class="faq__list">
+          <details open>
+            <summary>Does my child need a laptop?</summary>
+            <p class="text-muted text-small">
+              No laptop needed. We bring one for every child in every class.
+            </p>
+          </details>
+          <details>
+            <summary>What if my child has never coded?</summary>
+            <p class="text-muted text-small">
+              Perfect. Beginner classes assume no experience.
+            </p>
+          </details>
+          <details>
+            <summary>How much do classes cost after the trial?</summary>
+            <p class="text-muted text-small">
+              Terms are RM 360 for 8 weekly sessions. The trial is free.
+            </p>
+          </details>
+          <details>
+            <summary>Is it safe?</summary>
+            <p class="text-muted text-small">
+              Classes are supervised by two adults, and children only use our
+              offline classroom accounts.
+            </p>
+          </details>
+          <details>
+            <summary>What if my child doesn't enjoy it?</summary>
+            <p class="text-muted text-small">
+              There's no obligation after the trial. If they join and change
+              their mind in the first two weeks, we refund the rest of the term.
+            </p>
+          </details>
+          <details>
+            <summary>Can siblings join together?</summary>
+            <p class="text-muted text-small">
+              Yes, if they're in the same age group. Siblings get 10% off.
+            </p>
+          </details>
+          <details>
+            <summary>How big are the classes?</summary>
+            <p class="text-muted text-small">
+              No more than 8 children per class.
+            </p>
+          </details>
+        </div>
+      </section>
 
-    <!-- 06 Parent FAQ (interaction 2: expandable information) -->
-    <section class="section faq" id="faq" aria-labelledby="faq-title">
-      <div class="faq__intro">
-        <h2 id="faq-title">Questions parents ask</h2>
-        <p class="text-muted">Still unsure? Send an enquiry and a real person will reply.</p>
-      </div>
-      <div class="faq__list">
-        <details open>
-          <summary>Does my child need a laptop?</summary>
-          <p class="text-muted text-small">No. We provide laptops for every class.</p>
-        </details>
-        <details>
-          <summary>What if my child has never coded?</summary>
-          <p class="text-muted text-small">Perfect. Beginner classes assume no experience.</p>
-        </details>
-        <details>
-          <summary>How much do classes cost after the trial?</summary>
-          <p class="text-muted text-small">Terms are RM 360 for 8 weekly sessions. The trial is free.</p>
-        </details>
-        <details>
-          <summary>Is it safe?</summary>
-          <p class="text-muted text-small">Classes are supervised by two adults, and children only use our offline classroom accounts.</p>
-        </details>
-        <details>
-          <summary>What if my child doesn't enjoy it?</summary>
-          <p class="text-muted text-small">There's no obligation after the trial. If they join and change their mind in the first two weeks, we refund the rest of the term.</p>
-        </details>
-        <details>
-          <summary>Can siblings join together?</summary>
-          <p class="text-muted text-small">Yes, if they're in the same age group. Siblings get 10% off.</p>
-        </details>
-        <details>
-          <summary>How big are the classes?</summary>
-          <p class="text-muted text-small">No more than 8 children per class.</p>
-        </details>
-      </div>
-    </section>
-
-    <!-- 07 Enquiry form (interaction 3: validated demo form) -->
-    <section class="section section--white enquiry" id="enquiry" aria-labelledby="enquiry-title">
-      <div class="enquiry__intro">
-        <h2 id="enquiry-title">Book your free trial</h2>
-        <p class="text-muted">Tell us about your child and a real person will confirm a time within two working days.</p>
-        <p class="notice"><strong>This is a demo form. Nothing you type is sent or saved.</strong></p>
-      </div>
-
-      <form class="form" id="enquiry-form" novalidate>
-        <div class="field">
-          <label for="parent-name">Parent's name</label>
-          <input type="text" id="parent-name" name="parent-name" autocomplete="off" aria-describedby="parent-name-error">
-          <p class="error" id="parent-name-error" hidden></p>
+      <!-- 07 Enquiry form (interaction 3: validated demo form) -->
+      <section
+        class="section section--white enquiry"
+        id="enquiry"
+        aria-labelledby="enquiry-title"
+      >
+        <div class="enquiry__intro">
+          <h2 id="enquiry-title">Book your free trial</h2>
+          <p class="text-muted">
+            Tell us about your child and a real person will confirm a time
+            within two working days.
+          </p>
+          <p class="notice">
+            <strong
+              >This is a demo form. Nothing you type is sent or saved.</strong
+            >
+          </p>
         </div>
 
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" autocomplete="off" aria-describedby="email-error">
-          <p class="error" id="email-error" hidden></p>
-        </div>
+        <form class="form" id="enquiry-form" novalidate>
+          <div class="field">
+            <label for="parent-name">Parent's name</label>
+            <input
+              type="text"
+              id="parent-name"
+              name="parent-name"
+              autocomplete="off"
+              aria-describedby="parent-name-error"
+            />
+            <p class="error" id="parent-name-error" hidden></p>
+          </div>
 
-        <div class="field">
-          <label for="child-age">Child's age</label>
-          <select id="child-age" name="child-age" aria-describedby="child-age-error">
-            <option value="">Choose age</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-          </select>
-          <p class="error" id="child-age-error" hidden></p>
-        </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="off"
+              aria-describedby="email-error"
+            />
+            <p class="error" id="email-error" hidden></p>
+          </div>
 
-        <div class="field">
-          <label for="preferred-class">Preferred class</label>
-          <select id="preferred-class" name="preferred-class" aria-describedby="preferred-class-error">
-            <option value="">Choose a class</option>
-            <!-- Options are added by js/enquiry-form.js from the class data -->
-          </select>
-          <p class="error" id="preferred-class-error" hidden></p>
-        </div>
+          <div class="field">
+            <label for="child-age">Child's age</label>
+            <select
+              id="child-age"
+              name="child-age"
+              aria-describedby="child-age-error"
+            >
+              <option value="">Choose age</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+            </select>
+            <p class="error" id="child-age-error" hidden></p>
+          </div>
 
-        <button class="btn btn--primary" type="submit">Send enquiry</button>
-        <p class="form__status" id="form-status" role="status" hidden></p>
-      </form>
-    </section>
+          <div class="field">
+            <label for="preferred-class">Preferred class</label>
+            <select
+              id="preferred-class"
+              name="preferred-class"
+              aria-describedby="preferred-class-error"
+            >
+              <option value="">Choose a class</option>
+              <!-- Options are added by js/enquiry-form.js from the class data -->
+            </select>
+            <p class="error" id="preferred-class-error" hidden></p>
+          </div>
 
-  </main>
+          <button class="btn btn--primary" type="submit">Send enquiry</button>
+          <p class="form__status" id="form-status" role="status" hidden></p>
+        </form>
+      </section>
+    </main>
 
-  <!-- 08 Footer -->
-  <footer class="site-footer">
-    <p>CodeCamp Kids KL is a fictional organisation created for a design assessment. Address, prices and classes are demo content.</p>
-    <p class="site-footer__credits">Credits: Nunito and Inter fonts (Google Fonts, SIL Open Font License).</p>
-  </footer>
-</body>
+    <!-- 08 Footer -->
+    <footer class="site-footer">
+      <p>
+        CodeCamp Kids KL is a fictional organisation created for a design
+        assessment. Address, prices and classes are demo content.
+      </p>
+      <p class="site-footer__credits">
+        Credits: Nunito and Inter fonts (Google Fonts, SIL Open Font License).
+      </p>
+    </footer>
+  </body>
 </html>
